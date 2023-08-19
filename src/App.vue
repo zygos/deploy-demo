@@ -10,10 +10,6 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
-      <button type="button">
-        0
-      </button>
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
