@@ -8,9 +8,8 @@ import { devices } from '@playwright/test'
 // require('dotenv').config();
 
 const formBaseURL = (baseURL: string) => {
-  const basePath = process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}`
-    : ''
+  const repo = process.env.GITHUB_REPOSITORY
+  const basePath = repo ? `/${repo.split('/')[1]}` : ''
 
   return `${baseURL}${basePath}`
 }
