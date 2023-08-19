@@ -9,10 +9,13 @@ import { devices } from '@playwright/test'
 
 const formBaseURL = (baseURL: string) => {
   const repo = process.env.GITHUB_REPOSITORY
+  console.log('repo', repo)
   const basePath = repo ? `/${repo.split('/')[1]}` : ''
 
   return `${baseURL}${basePath}`
 }
+
+console.log('base', formBaseURL('http://localhost:5173'))
 
 /**
  * See https://playwright.dev/docs/test-configuration.
